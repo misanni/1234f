@@ -37,6 +37,7 @@ const Show = () => {
         </Form>
         <Form action={`/delete/${post.id}`} method="post">
           <motion.button
+          animate={{rotateZ: 180, color: '#ff2994'}}
           >
             Delete Book</motion.button>
         </Form>
