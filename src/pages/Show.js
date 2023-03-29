@@ -1,5 +1,5 @@
 import { Link, useLoaderData, Form } from "react-router-dom";
-
+import {motion} from 'framer-motion'
 // destructuring the props needed to get our post, including router prop match
 const Show = () => {
   const post = useLoaderData();
@@ -36,7 +36,9 @@ const Show = () => {
           <button>Update Book</button>
         </Form>
         <Form action={`/delete/${post.id}`} method="post">
-          <button>Delete Book</button>
+          <motion.button
+          >
+            Delete Book</motion.button>
         </Form>
       </div>
       <Link to="/">
