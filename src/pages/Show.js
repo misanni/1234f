@@ -43,7 +43,18 @@ const Show = () => {
         </Form>
       </div>
       <Link to="/">
-        <button>Go Back</button>
+        <motion.button
+ initial={{
+    x: -300,
+    scale: 0.5,
+  }}
+  animate={{
+    x: 0,
+    scale: 1,
+  }}
+  transition={{ duration: 1 }}
+        >
+            Go Back</motion.button>
       </Link>
     </div>
   );
