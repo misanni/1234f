@@ -1,7 +1,8 @@
 import { Link, useLoaderData, Form } from "react-router-dom";
-import {motion} from 'framer-motion'
+
 // destructuring the props needed to get our post, including router prop match
 const Show = () => {
+  // it allows you to pass data from one route to another during navigation.
   const post = useLoaderData();
 
   ////////////////////
@@ -23,13 +24,13 @@ const Show = () => {
   };
 
   return (
-    <div style={div}>
+    <div className='input'style={div}>
         <h1 className='edit-book'>Edit Book</h1>
       <h2>Book Title:{post.subject}</h2>
       <h3> Grade:{post.details}</h3>
      
       <div style={{ textAlign: "center" }}>
-        <Form action={`/update/${post.id}`} method="post">
+        <Form className='edit-input'action={`/update/${post.id}`} method="post">
           <input
             type="text"
             name="subject"
@@ -46,31 +47,14 @@ const Show = () => {
           <button>Update Book</button>
         </Form>
         <Form action={`/delete/${post.id}`} method="post">
-          <motion.button
-          animate={{rotateZ: 360, color: '#ff2994', x: 0, scale: 1,}}
-          initial={{
-            x: 300,
-            scale: 0.5,
-          }}
-          transition={{ duration: 1 }}
-          >
-            Delete Book</motion.button>
+          
+            <button>Delete Book</button>
         </Form>
       </div>
       <Link to="/Home">
-        <motion.button
- initial={{
-    x: -300,
-    scale: 0.5,
-  }}
-  animate={{
-    fontSize: 50,
-    x: 0,
-    scale: 1,
-  }}
-  transition={{ duration: 1 }}
-        >
-            Go Back</motion.button>
+        
+      
+            <button>Go Back</button>
       </Link>
       
     </div>

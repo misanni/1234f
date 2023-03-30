@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 // import Link from '@mui/material/Link';
-
+//pass value from a child component to a parent component
 const Post = (props) => {
   const post = props.post;
 
@@ -23,7 +23,7 @@ const Post = (props) => {
   return (
     
     <div style={div}>
-      <Container sx={{ py: 8 }} maxWidth="sx">
+      <Container xs={{ py: 8 }} maxWidth="sm">
       <Grid container spacing={4} 
           sx={{
             '& .MuiGrid-item': {
@@ -39,12 +39,12 @@ const Post = (props) => {
           <Grid item>
 
             <CardContent sx={{ flexGrow: 1 }}>
-              <Typography gutterBottom variant="h2" component="h2">
+              <Typography gutterBottom variant="h5" component="h5">
                   <Link to={`/post/${post.id}`}>
                     Title: {post.subject}
                   </Link>
               </Typography>
-              <Typography>
+              <Typography gutterBottom variant="h5" component="h5">
                 Grade: {post.details}
               </Typography>
 

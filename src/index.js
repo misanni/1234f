@@ -5,9 +5,10 @@ import reportWebVitals from './reportWebVitals';
 // import "milligram"
 import {RouterProvider} from "react-router-dom"
 import router from './router';
-
+//checks where we have the id of root and sendd all react codes ther
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  //
   <React.StrictMode>
     <RouterProvider router={router}/>
   </React.StrictMode>

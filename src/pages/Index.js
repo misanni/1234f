@@ -6,16 +6,17 @@ import Link from '@mui/material/Link';
 
 
 const Index = (props) => {
+  //to load data amount a component from a previous route to a new route
   const todos = useLoaderData();
 
   return <>
   <div className='form'style={{textAlign: "center"}}>
       
-      <Form className='input'action="/create" method="post">
+      <Form className='input index'action="/create" method="post">
           <input type="text" name="subject" placeholder="Enter book name"/>
           <input type="text" name="details" placeholder="Grade"/>
           {/* <input type="text" name="author" placeholder="Author"/> */}
-          <button>Create New Book</button>
+          <button className='new-book'>Create New Book</button>
       </Form>
   </div>
 <div className='card'>
