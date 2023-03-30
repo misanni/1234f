@@ -9,6 +9,7 @@ const generateTodoObject = async (request) => {
   return {
     subject: formData.get("subject"),
     details: formData.get("details"),
+    
   };
 } 
 
@@ -27,7 +28,7 @@ export async function CreateAction({ request }) {
   });
 
   // redirect back to the index page
-  return redirect("/");
+  return redirect("/home");
 }
 
 export async function UpdateAction({ request, params }) {
@@ -44,7 +45,7 @@ export async function UpdateAction({ request, params }) {
     });
   
     // redirect back to the index page
-    return redirect("/");
+    return redirect("/home");
   }
 
 export async function DeleteAction({params}){
@@ -57,5 +58,5 @@ export async function DeleteAction({params}){
     })
 
     // redirect
-    return redirect("/")
+    return redirect("/home")
 }

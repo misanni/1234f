@@ -9,17 +9,26 @@ const Show = () => {
   ///////////////////
   const div = {
     textAlign: "center",
-    border: "3px solid green",
-    width: "80%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+     border: "none",
+    width: "50%",
     margin: "30px auto",
+    backgroundColor: "white",
+    borderRadius: "10px",
+    padding: "20px",
+    
+
   };
 
   return (
     <div style={div}>
-      <h1>{post.subject}</h1>
-      <h2>{post.details}</h2>
+        <h1 className='edit-book'>Edit Book</h1>
+      <h2>Book Title:{post.subject}</h2>
+      <h3> Grade:{post.details}</h3>
+     
       <div style={{ textAlign: "center" }}>
-        <h2>Create a Todo</h2>
         <Form action={`/update/${post.id}`} method="post">
           <input
             type="text"
@@ -33,22 +42,29 @@ const Show = () => {
             placeholder="write details here"
             defaultValue={post.details}
           />
+          
           <button>Update Book</button>
         </Form>
         <Form action={`/delete/${post.id}`} method="post">
           <motion.button
-          animate={{rotateZ: 360, color: '#ff2994'}}
+          animate={{rotateZ: 360, color: '#ff2994', x: 0, scale: 1,}}
+          initial={{
+            x: 300,
+            scale: 0.5,
+          }}
+          transition={{ duration: 1 }}
           >
             Delete Book</motion.button>
         </Form>
       </div>
-      <Link to="/">
+      <Link to="/Home">
         <motion.button
  initial={{
     x: -300,
     scale: 0.5,
   }}
   animate={{
+    fontSize: 50,
     x: 0,
     scale: 1,
   }}
@@ -56,8 +72,10 @@ const Show = () => {
         >
             Go Back</motion.button>
       </Link>
+      
     </div>
   );
 };
+
 
 export default Show;

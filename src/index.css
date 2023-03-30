@@ -5,9 +5,76 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("image/b.jpeg");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.button {
+  color: black;
+  position: absolute;
+  top: 80%;
+ width: 120px;
+ height: 40px;
+ background-color: white;
+ border-radius: 7px;
+ text-align: center;
+}
+.Home {
+ 
+  position: absolute;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-size: 80px;
+ color: white;
+  font-weight: 900;
+}
+.input {
+  min-width: 20em;
+max-width: 40em;
+background-color: white;
+padding: 20px;
+
+}
+.welcome-note {
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+}
+.form {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+ position: absolute;
+ top: 20px;
+ left: 20px;
+
+ background-color: white;
+}
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 100vh;
+
+}
+.edit-book {
+  background-color: blueviolet;
+  color: white;
+  width: 300px;
+  font-weight: 900;
+  font-size: 4em;
 }
