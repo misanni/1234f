@@ -25,7 +25,7 @@ This app serves as a book borrowing tracker, allowing me to keep track of the bo
 ## The Route Table
 | Route | 
 :--------:
-| /GET/DISPLAY INDEX/''/
+| /GET/DISPLAY INDEX/''/|
 |/POST/ADD NEW BOOK//:id |
 |/PUT/UPDATE BOOK//:id |
 |/GET/DISPLAY BOOK DETAILS/:id |
